@@ -1,5 +1,5 @@
 import unittest
-from speeding import main
+from speeding2 import main
 
 class SpeedingTest(unittest.TestCase):
 

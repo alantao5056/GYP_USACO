@@ -6,10 +6,10 @@ def getMaxSpeeding(speeding, bessie):
   return maxSpeeding
 
 def main(inputFile, outputFile):
-  inputFile = open(inputFile, 'r')
-  outputFile = open(outputFile, 'w')
+  speedingInput = open(inputFile, 'r')
+  speedingOutput = open(outputFile, 'w')
   
-  N, M = inputFile.readline().strip().split()
+  N, M = speedingInput.readline().strip().split()
   N, M = int(N), int(M)
   
   # initializing speeding
@@ -17,7 +17,7 @@ def main(inputFile, outputFile):
   speeding = [-1] * 101
   
   for _ in range(N):
-    length, speed = inputFile.readline().strip().split()
+    length, speed = speedingInput.readline().strip().split()
     length, speed = int(length), int(speed)
     
     # adding array of length and speed
@@ -31,7 +31,7 @@ def main(inputFile, outputFile):
   bessie = [-1] * 101
   
   for _ in range(M):
-    length, speed = inputFile.readline().strip().split()
+    length, speed = speedingInput.readline().strip().split()
     length, speed = int(length), int(speed)
     
     # adding array of length and speed
@@ -39,11 +39,11 @@ def main(inputFile, outputFile):
       bessie[i] = speed
     curBessieIndex += length
   
-  inputFile.close()
+  speedingInput.close()
   
-  outputFile.write(str(getMaxSpeeding(speeding, bessie)) + '\n')
+  speedingOutput.write(str(getMaxSpeeding(speeding, bessie)) + '\n')
   
-  outputFile.close()
+  speedingOutput.close()
 
 
 main('speeding.in', 'speeding.out')
