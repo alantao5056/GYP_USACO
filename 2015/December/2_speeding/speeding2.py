@@ -56,7 +56,7 @@ def main(inputFile, outputFile):
     bessie[i] = Segment(length, speed)
 
   speedingInput.close()
-  
+
   speedingOutput.write(str(getMaxSpeeding(speedLimit, bessie)) + '\n')
   speedingOutput.close()
 
