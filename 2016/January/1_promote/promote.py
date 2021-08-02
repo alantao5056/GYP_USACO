@@ -19,7 +19,6 @@ def main(inputFile: str, outputFile: str):
   promoteInput.close()
 
   # writing
-
   goldToPlantium = plantiumAfter - plantiumBefore
   silverToGold = goldAfter - goldBefore + goldToPlantium
   bronzeToSilver = silverAfter - silverBefore + silverToGold
